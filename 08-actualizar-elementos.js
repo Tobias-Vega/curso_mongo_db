@@ -16,9 +16,24 @@ db.users.updateOne(
 
 db.users.updateMany(
   {
-    age: { $lt: 25 }
+    support: {
+      $exists: false
+    }
   },
   {
-    $set: { support: true }
+    $set: { support: false }
+  }
+)
+
+// Actualizar el documento support a true con el nombre de Fernando
+
+db.users.updateOne(
+  {
+    name: 'Fernando'
+  },
+  {
+    $set: {
+      support: true
+    }
   }
 )
