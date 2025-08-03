@@ -30,3 +30,25 @@ db.items.insertMany(
     { type: 'Monitor', color: 'White', price: 50 },
   ]
 )
+
+db.autores.insertMany(
+  [
+    {nombre: 'J.K Rowling', nacionalidad: 'Británica'},
+    {nombre: 'George R. R. Martin', nacionalidad: 'Estadounidense'}
+  ]
+)
+
+db.libros.insertMany(
+  [
+    {
+      titulo: 'Harry Potter y la piedra filosofal',
+      fechaLanzamiento: 1997,
+      autor_id: ObjectId('688ff17f0e306a0ba9a5a2fd')
+    },
+    {
+      titulo: 'Harry Potter y El prisionero de Azkabán',
+      fechaLanzamiento: 1999,
+      autor_id: ObjectId('688ff17f0e306a0ba9a5a2fd')
+    }
+  ]
+)
