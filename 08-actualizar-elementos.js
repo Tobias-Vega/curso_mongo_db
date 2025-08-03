@@ -37,3 +37,16 @@ db.users.updateOne(
     }
   }
 )
+
+// $unset --> elimina uno o varios atributos
+
+db.users.updateOne(
+  {
+    createdAt: { $exists: true }
+  },
+  {
+    $unset: {
+      createdAt: true
+    }
+  }
+)
