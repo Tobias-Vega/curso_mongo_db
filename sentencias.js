@@ -18,3 +18,15 @@ for(i = 0; i < 100; i++) {
     ]
   )
 }
+
+db.items.insertMany(
+  [
+    { type: 'Camera', color: 'Red', price: 120 },
+    { type: 'Laptop', color: 'White', price: 400 },
+    { type: 'Laptop', color: 'Black', price: 600 },
+    { type: 'Camera', color: 'Silver', price: 200 },
+    { type: 'Microphone', color: 'Black', price: 200 },
+    { type: 'Mouse', color: 'White', price: 50 },
+    { type: 'Monitor', color: 'White', price: 50 },
+  ]
+)
