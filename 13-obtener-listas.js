@@ -69,3 +69,30 @@ db.users.findOne(
     }
   }
 )
+
+// Obtener todos los usuarios con 5 cursos
+
+db.users.find(
+  {
+    courses: {
+      $size: 5
+    }
+  }
+)
+
+// $where
+// Obtener todos los usuarios que posean al menos 3 cursos
+db.users.find(
+  {
+    $and: [
+      {
+        courses: {
+          $exists: true
+        }
+      },
+      {
+        $where: 'this.courses.length >= 3'
+      }
+    ]
+  }
+)
