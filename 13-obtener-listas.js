@@ -55,3 +55,17 @@ db.users.find(
     }
   }
 )
+
+// $slice --> position o index
+db.users.findOne(
+  {
+    name: 'Eduardo'
+  },
+  {
+    _id: false,
+    name: true,
+    courses: {
+      $slice: [0, 3] // int (Position) o [] (indice)
+    }
+  }
+)
