@@ -10,3 +10,11 @@ db.books.insertMany(
   {title: 'El alquimista', sales: 65},
   ]
 )
+
+for(i = 0; i < 100; i++) {
+  db.demo.insertMany(
+    [
+      { name: 'user' + i }
+    ]
+  )
+}
