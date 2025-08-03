@@ -50,3 +50,32 @@ db.users.updateOne(
     }
   }
 )
+
+// $inc --> incrementa valores en números enteros
+
+db.users.updateOne(
+  {
+    name: 'Rafael'
+  },
+  {
+    $inc: {
+      age: 1 // puede decrementarse usando números negativos
+    }
+  }
+)
+
+// upsert --> actualiza el documento, si no existe lo crea
+
+db.users.updateOne(
+  {
+    name: 'Luis'
+  },
+  {
+    $set: {
+      age: 27
+    }
+  },
+  {
+    upsert: true
+  }
+)
